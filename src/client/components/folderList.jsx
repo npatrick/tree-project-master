@@ -22,6 +22,7 @@ export default class FolderList extends Component {
       });
   }
 
+// passing the state values to the component FolderItem
   renderFolderItem() {
     return this.state.children.map(child => {
       return (

@@ -1,6 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+
+// transfered data.json here for now
+// a proper way would be to create a database
+// and start seeding it with data.json
 const FolderData = {
   "children": [
     {
