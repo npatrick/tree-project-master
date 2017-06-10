@@ -1,2 +1,13 @@
 .idea
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
 node_modules
+
+# Webpack Output
+src/client/public/bundle.js
+src/client/public/bundle.js.map
