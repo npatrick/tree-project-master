@@ -1,3 +1,12 @@
+# To Run The App
+
+Download all packages: npm install
+Run webpack: webpack -w
+Run the server: npm start
+Check the web app @: http://localhost:3000
+
+
+
 # Exercise: Build an Explorer
 
 This exercise is to build a folder and file explorer (or a tree control).
