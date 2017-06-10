@@ -1,9 +1,9 @@
 # To Run The App
 
-Download all packages: npm install
-Run webpack: webpack -w
-Run the server: npm start
-Check the web app @: http://localhost:3000
+* Download all packages: npm install
+* Run webpack: webpack -w
+* Run the server: npm start
+* Check the web app @: http://localhost:3000
 
 
 
