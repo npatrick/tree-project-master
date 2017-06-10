@@ -5,7 +5,8 @@
 * Run the server: npm start
 * Check the web app @: http://localhost:3000
 
-
+## The App so Far
+The current progress within the given timelimit of this exercise has been setting up the dev environment up till adding functionality of the folders. The next step is to properly travers the folders when each has children and so on. I didnt spend any time on the design because I felt like the functionality must be there first.
 
 # Exercise: Build an Explorer
 
