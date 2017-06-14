@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery'; // for the sole purpose of api req on this exercise
-import FolderItem from './folderItem.jsx';
+import FolderItem from './folderItem';
 
 export default class FolderList extends Component {
   constructor(props) {
