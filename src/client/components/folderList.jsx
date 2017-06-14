@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery'; // for the sole purpose of api req on this exercise
 import FolderItem from './folderItem';
+import traverseFolders from '../controllers/traverseFolders';
 
 export default class FolderList extends Component {
   constructor(props) {

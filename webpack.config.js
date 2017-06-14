@@ -17,6 +17,8 @@ module.exports = {
       }
     ]
   },
+  // This is what enables users to leave off the extension when importing:
+  // import File from '../path/to/file'
   resolve: {
     extensions: ["*", ".webpack.js", ".web.js", ".js", ".json", ".jsx"]
   }
