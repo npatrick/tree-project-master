@@ -1,16 +1,25 @@
-const traverseFolders = (value) => {
-  this.value = value;
-  this.children = [];
+const Folder = function(value) {
+  this.value = value.name;
+  this.children = value.children;
 };
 
-traverseFolders.prototype.DFSelect = (filter) => {
+Folder.prototype.DFTraverse = function() {
   var results = [];
 
   var finder = (node, depth) => {
-    if (filter(node.value, depth)) {
-      results.push(node.value);
+    if (node.name, depth) {
+      results.push({
+        "name": node.name,
+        "type":node.type,
+        "private": node.private,
+        "children": node.children
+      });
+    }
+    if (!node.children) {
+      return;
     }
     for (let i = 0; i < node.children.length; i++) {
+      console.log('checking depth num: ' + depth, node.children);
       let child = node.children[i];
       finder(child, depth + 1);
     }
@@ -20,4 +29,4 @@ traverseFolders.prototype.DFSelect = (filter) => {
   return results;
 };
 
-module.exports = traverseFolders;
+module.exports = Folder;
