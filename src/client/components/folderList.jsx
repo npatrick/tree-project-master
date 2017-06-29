@@ -22,10 +22,11 @@ export default class FolderList extends Component {
         })
       });
   }
-  
+
+
 // passing the state values to the component FolderItem
   renderFolderItem() {
-    const currentData = new Folder(this.state);
+    let currentData = new Folder(this.state);
     return currentData.DFTraverse(FolderItem);
   }
 
