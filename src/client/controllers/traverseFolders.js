@@ -17,12 +17,12 @@ Folder.prototype.DFTraverse = function(Component) {
       );
     }
     if (node.children.length > 0) {
-      result.push(<Component
+      result.push(<ul><Component
         key={node.name}
         name={node.name}
         type={node.type}
         private={node.private}
-        children={node.children} />
+        children={node.children} /></ul>
       )
     }
     node.children.forEach((child) => {
