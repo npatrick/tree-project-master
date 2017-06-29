@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import $ from 'jquery'; // for the sole purpose of api req on this exercise
 import FolderItem from './folderItem';
-import traverseFolders from '../controllers/traverseFolders';
+import Folder from '../controllers/traverseFolders';
 
 export default class FolderList extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class FolderList extends Component {
   }
 
   componentDidMount() {
-    this.getFolders()
+    this.getFolders();
   }
 
   getFolders() {
@@ -22,18 +22,11 @@ export default class FolderList extends Component {
         })
       });
   }
-
+  
 // passing the state values to the component FolderItem
   renderFolderItem() {
-    return this.state.children.map(child => {
-      return (
-        <FolderItem
-          name={child.name}
-          type={child.type}
-          private={child.private}
-          children={child.children} />
-      )
-    })
+    const currentData = new Folder(this.state);
+    return currentData.DFTraverse(FolderItem);
   }
 
   openFolders() {
@@ -47,10 +40,9 @@ export default class FolderList extends Component {
         <button onClick={this.openFolders}>
           Open Explorer
         </button>
+        <break />
         <div className="container">
-          <ul>
-            {this.renderFolderItem.bind(this)()}
-          </ul>
+          {this.renderFolderItem.bind(this)()}
         </div>
       </div>
     )

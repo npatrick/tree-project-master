@@ -6,9 +6,9 @@ export default class FolderItem extends Component {
     console.log('Val of props name', this.props.name);
 
     return (
-      <li className="row">
+      <div className="row">
         <button>{this.props.name}</button>
-      </li>
+      </div>
     )
   }
 };
