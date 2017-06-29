@@ -8,21 +8,22 @@ const Folder = function(value) {
 Folder.prototype.DFTraverse = function(Component) {
   var result = [];
   var finder = (node, depth, Component) => {
+    console.log('what is node?', node);
     if (!node.children) {
-      return result.push(<Component
+      return result.push(<ul><Component
         key={node.name}
         name={node.name}
         type={node.type}
-        private={node.private} />
+        private={node.private} /></ul>
       );
     }
     if (node.children.length > 0) {
-      result.push(<ul><Component
+      result.push(<Component
         key={node.name}
         name={node.name}
         type={node.type}
         private={node.private}
-        children={node.children} /></ul>
+        children={node.children} />
       )
     }
     node.children.forEach((child) => {

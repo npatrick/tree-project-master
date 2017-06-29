@@ -35,7 +35,7 @@ export default class FolderList extends Component {
   }
 
   render() {
-    console.log('Status on state children:', this.state.children);
+    // console.log('Status on state children:', this.state.children);
     return (
       <div>
         <button onClick={this.openFolders}>
