@@ -123,6 +123,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/public')));
 
 app.get('/folders', (req, res) => {
+  console.log('Requested the folder data');
   res.send(FolderData);
 });
 
